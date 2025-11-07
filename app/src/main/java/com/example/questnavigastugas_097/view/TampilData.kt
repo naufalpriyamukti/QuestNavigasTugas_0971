@@ -21,6 +21,7 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.questnavigastugas_097.R
 
 @Composable
 fun TampilData(
@@ -69,6 +70,20 @@ fun TampilData(
             Column(modifier = Modifier.padding(12.dp)) {
                 Text(stringResource(id= R.string.nama), fontWeight = FontWeight.Bold, fontSize = 14.sp)
                 Text(nama, fontStyle = FontStyle.Italic, fontSize = 16.sp, fontFamily = FontFamily.Cursive)
+            }
+        }
+
+        // Jenis Kelamin
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(vertical = 5.dp),
+            colors = CardDefaults.cardColors(containerColor = Color.White),
+            elevation = CardDefaults.cardElevation(defaultElevation = 6.dp)
+        ) {
+            Column(modifier = Modifier.padding(12.dp)) {
+                Text(stringResource(id= R.string.jenis_kel), fontWeight = FontWeight.Bold, fontSize = 14.sp,)
+                Text(jenis, fontStyle = FontStyle.Italic, fontSize = 16.sp,  fontFamily = FontFamily.Cursive)
             }
         }
 
