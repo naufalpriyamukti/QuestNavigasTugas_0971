@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">QuestNavigasTugas_097</string>
+    <string name="jenis_kel">JENIS KELAMIN</string>
+    <string name="nama">NAMA LENGKAP</string>
+    <string name="status">STATUS PERKAWINAN</string>
+    <string name="alamat">ALAMAT</string>
+    <string name="list">LIST DAFTAR PESERTA</string>
+    <string name="form">FORMULIR PENDAFTARAN</string>
+
 </resources>
