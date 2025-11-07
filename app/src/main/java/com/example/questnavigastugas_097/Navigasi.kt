@@ -67,7 +67,12 @@ fun Prak6App(
                     }
                 )
             }
-
         }
     }
+}
+
+private fun cancelAndBackToHomeDepan(
+    navController: NavHostController
+) {
+    navController.popBackStack(com.example.prak6.Navigasi.HomeDepan.name, inclusive = false)
 }
