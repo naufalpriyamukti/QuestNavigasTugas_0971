@@ -97,6 +97,20 @@ fun Formulir(onSubmitClick: (String, String, String, String) -> Unit)
                             Text(text = item)
                         }
                     }
+
+                    Text(stringResource(id=R.string.status), fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                    statusList.forEach { item ->
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.selectable(
+                                selected = textStatus == item,
+                                onClick = { textStatus = item }
+                            )
+                        ) {
+                            RadioButton(selected = textStatus == item, onClick = { textStatus = item })
+                            Text(text = item)
+                        }
+                    }
                 }
             }
         }
