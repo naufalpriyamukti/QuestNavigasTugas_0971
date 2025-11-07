@@ -87,6 +87,20 @@ fun TampilData(
             }
         }
 
+        // Status Perkawinan
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(vertical = 5.dp),
+            colors = CardDefaults.cardColors(containerColor = Color.White),
+            elevation = CardDefaults.cardElevation(defaultElevation = 6.dp)
+        ) {
+            Column(modifier = Modifier.padding(12.dp)) {
+                Text(stringResource(id= R.string.status), fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                Text(status, fontStyle = FontStyle.Italic, fontSize = 16.sp, fontFamily = FontFamily.Cursive)
+            }
+        }
+
 
     }
 
