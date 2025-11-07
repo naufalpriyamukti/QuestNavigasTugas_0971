@@ -8,6 +8,14 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Scaffold
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.example.questnavigastugas_097.view.Formulir
+import com.example.questnavigastugas_097.view.HomeDepan
+import com.example.questnavigastugas_097.view.TampilData
 
 enum class Navigasi {
     HomeDepan,
@@ -15,7 +23,7 @@ enum class Navigasi {
     TampilData
 }
 @Composable
-fun Prak6App(
+fun DataApp(
     navController: NavHostController = rememberNavController()
 )
 {
@@ -60,10 +68,10 @@ fun Prak6App(
                     status = status,
                     alamat = alamat,
                     onBerandaClick = {
-                        navController.navigate(com.example.prak6.Navigasi.HomeDepan.name)
+                        navController.navigate(com.example.questnavigastugas_097.Navigasi.HomeDepan.name)
                     },
                     onFormulirClick = {
-                        navController.navigate(com.example.prak6.Navigasi.Formulir.name)
+                        navController.navigate(com.example.questnavigastugas_097.Navigasi.Formulir.name)
                     }
                 )
             }
@@ -74,5 +82,5 @@ fun Prak6App(
 private fun cancelAndBackToHomeDepan(
     navController: NavHostController
 ) {
-    navController.popBackStack(com.example.prak6.Navigasi.HomeDepan.name, inclusive = false)
+    navController.popBackStack(com.example.questnavigastugas_097.Navigasi.HomeDepan.name, inclusive = false)
 }
