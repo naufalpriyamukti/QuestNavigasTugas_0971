@@ -30,24 +30,24 @@ fun DataApp(
     Scaffold { innerPadding ->
         NavHost(
             navController = navController,
-            startDestination = com.example.prak6.Navigasi.HomeDepan.name,
+            startDestination = com.example.questnavigastugas_097.Navigasi.HomeDepan.name,
             modifier = Modifier.padding(innerPadding)
         ){
             // Halaman Selamat Datang
-            composable(com.example.prak6.Navigasi.HomeDepan.name) {
+            composable(com.example.questnavigastugas_097.Navigasi.HomeDepan.name) {
                 HomeDepan(
                     onSubmitClick = {
-                        navController.navigate(com.example.prak6.Navigasi.Formulir.name)
+                        navController.navigate(com.example.questnavigastugas_097.Navigasi.Formulir.name)
                     }
                 )
             }
 
             // Halaman Formulir Pendaftaran
-            composable(com.example.prak6.Navigasi.Formulir.name) {
+            composable(com.example.questnavigastugas_097.Navigasi.Formulir.name) {
                 Formulir(
                     onSubmitClick = { nama, jenis, status, alamat ->
                         navController.navigate(
-                            "${com.example.prak6.Navigasi.TampilData.name}/$nama/$jenis/$status/$alamat"
+                            "${com.example.questnavigastugas_097.Navigasi.TampilData.name}/$nama/$jenis/$status/$alamat"
                         )
                     }
                 )
@@ -55,7 +55,7 @@ fun DataApp(
 
             // Halaman Tampil Data
             composable(
-                route = "${com.example.prak6.Navigasi.TampilData.name}/{nama}/{jenis}/{status}/{alamat}"
+                route = "${com.example.questnavigastugas_097.Navigasi.TampilData.name}/{nama}/{jenis}/{status}/{alamat}"
             ) { backStackEntry ->
                 val nama = backStackEntry.arguments?.getString("nama") ?: ""
                 val jenis = backStackEntry.arguments?.getString("jenis") ?: ""
